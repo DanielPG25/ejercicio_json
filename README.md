@@ -7,11 +7,12 @@ sus estadísticas base).
 te muestra cuantos hay en total con ese tipo.
 
 3.Te pide una cadena por teclado y te muestra los pokemon que empiecen
-por dicha cadena.
+por dicha cadena y la suma total de sus estadísticas base.
 
 4.Te pide un tipo por teclado y te muestra todos los pokemon de ese tipo.
 
 5.Te pide dos pokemon por teclado y te indica cual de los dos es más fuerte
-(según la suma de sus estadísticas base).
+(según la suma de sus estadísticas base). También indica cuales de las
+estadñisticas base del ganador son mejores que las del perdedor.
 
 
