@@ -104,5 +104,11 @@ def Ranking(fichero):
 	estadisticas=[]
 	nombres.extend([primeron,segundon,terceron,cuarton,quinton,sexton,septimon,octavon,novenon,decimon])
 	estadisticas.extend([primeroe,segundoe,terceroe,cuartoe,quintoe,sextoe,septimoe,octavoe,novenoe,decimoe])
-	return nombres,estadisticas								
+	return nombres,estadisticas
 
+def ContarTipos(tipo,fichero):
+	acum = 0									
+	for b in fichero:
+		if tipo in b.get("type"):
+			acum=acum+1
+	return acum		
