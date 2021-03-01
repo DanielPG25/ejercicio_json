@@ -11,10 +11,11 @@ def leer_json(fichero):
 		sys.exit(0)
 
 def Menu():
-	print("1. Estadística de un equipo")
-	print("2. Nombres de equipos")
-	print("3. Clasificación de la liga")
-	print("4. Quiniela por fecha")
-	print("5. Salir")
+	print("1. Top 10 Pokemon")
+	print("2. Contar tipos de Pokemon")
+	print("3. Buscar Pokemon por nombre")
+	print("4. Buscar Pokemon por tipo")
+	print("5. Combate")
+	print("6. Salir")
 	opcion = int(input("Dime que opción eliges: "))
 	return opcion
