@@ -24,4 +24,14 @@ while opcion != 6:
 		print(f"El número de pokemon de ese tipo es {numero}")
 		print()
 		opcion=Menu()		
+	if opcion == 3:
+		cadena = input("Dime la cadena por la que quieres buscar (la primera en mayúscula): ")
+		print()
+		nombres=BuscarNombre(cadena,fichero)
+		print("Los Pokemon que empiezan por esa cadena son: ")
+		for nombre in nombres:
+			print(nombre," ",end="")
+		print()
+		opcion=Menu()
+		print()	
 

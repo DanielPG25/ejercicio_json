@@ -111,4 +111,11 @@ def ContarTipos(tipo,fichero):
 	for b in fichero:
 		if tipo in b.get("type"):
 			acum=acum+1
-	return acum		
+	return acum
+
+def BuscarNombre(cadena,fichero):
+	lista=[]
+	for a in fichero:
+		if a.get("name").get("english").startswith(cadena):
+			lista.append(a.get("name").get("english"))
+	return lista					
