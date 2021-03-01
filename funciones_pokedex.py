@@ -19,3 +19,12 @@ def Menu():
 	print("6. Salir")
 	opcion = int(input("Dime que opción eliges: "))
 	return opcion
+
+def SumarEstadisticas(fichero):
+	lista=[]
+	for a in fichero:
+		nombrebase = {}
+		nombrebase["nombre"] = a.get("name").get("english")
+		nombrebase["stats"] = (a.get("base").get("HP")) + (a.get("base").get("Attack")) + (a.get("base").get("Defense")) + (a.get("base").get("Sp. Attack")) + (a.get("base").get("Sp. Defense")) + (a.get("base").get("Speed"))
+		lista.append(nombrebase)
+	return lista	
