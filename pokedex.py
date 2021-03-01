@@ -28,9 +28,12 @@ while opcion != 6:
 		cadena = input("Dime la cadena por la que quieres buscar (la primera en mayúscula): ")
 		print()
 		nombres=BuscarNombre(cadena,fichero)
+		lista = SumarEstadisticas(fichero)
 		print("Los Pokemon que empiezan por esa cadena son: ")
-		for nombre in nombres:
-			print(nombre," ",end="")
+		for a in nombres:
+			for b in lista:
+				if b.get("nombre") == a:
+					print(f"El pokemon {b.get('nombre')} tiene una suma de {b.get('stats')} puntos entre todas las estadísticas")
 		print()
 		opcion=Menu()
 		print()	
