@@ -37,4 +37,14 @@ while opcion != 6:
 		print()
 		opcion=Menu()
 		print()	
+	if opcion == 4:
+		print("Los tipos son los siguientes: Normal, Fire, Water, Grass, Electric, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Rock, Ghost, Dark, Dragon, Steel, Fairy")
+		print()
+		tipo = input("Elige uno de los mencionados anteriormente: ")
+		listap = BuscarPorTipo(tipo,fichero)
+		print("Los Pokemon de ese tipo son: ")
+		for b in listap:
+			print(b,",",end="")
+		print()
+		opcion=Menu()		
 

@@ -118,4 +118,11 @@ def BuscarNombre(cadena,fichero):
 	for a in fichero:
 		if a.get("name").get("english").startswith(cadena):
 			lista.append(a.get("name").get("english"))
-	return lista					
+	return lista
+
+def BuscarPorTipo(tipo,fichero):
+	lista=[]
+	for a in fichero:
+		if tipo in a.get("type"):
+			lista.append(a.get("name").get("english"))
+	return lista			
