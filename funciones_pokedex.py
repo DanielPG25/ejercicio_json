@@ -22,12 +22,16 @@ def Menu():
 
 def SumarEstadisticas(fichero):
 	lista=[]
-	for a in fichero:
-		nombrebase = {}
-		nombrebase["nombre"] = a.get("name").get("english")
-		nombrebase["stats"] = (a.get("base").get("HP")) + (a.get("base").get("Attack")) + (a.get("base").get("Defense")) + (a.get("base").get("Sp. Attack")) + (a.get("base").get("Sp. Defense")) + (a.get("base").get("Speed"))
-		lista.append(nombrebase)
-	return lista	
+	try:
+		for a in fichero:
+			nombrebase = {}
+			nombrebase["nombre"] = a.get("name").get("english")
+			nombrebase["stats"] = (a.get("base").get("HP")) + (a.get("base").get("Attack")) + (a.get("base").get("Defense")) + (a.get("base").get("Sp. Attack")) + (a.get("base").get("Sp. Defense")) + (a.get("base").get("Speed"))
+			lista.append(nombrebase)
+		return lista
+	except:
+		print("Alguno de los pokemon no existe")
+		sys.exit(0)		
 
 def Ranking(fichero):
 	lista=SumarEstadisticas(fichero)
@@ -108,10 +112,14 @@ def Ranking(fichero):
 
 def ContarTipos(tipo,fichero):
 	acum = 0									
-	for b in fichero:
-		if tipo in b.get("type"):
-			acum=acum+1
-	return acum
+	try:
+		for b in fichero:
+			if tipo in b.get("type"):
+				acum=acum+1
+		return acum
+	except:
+		print("Ese tipo no existe")
+		sys.exit(0)	
 
 def BuscarNombre(cadena,fichero):
 	lista=[]
@@ -125,4 +133,21 @@ def BuscarPorTipo(tipo,fichero):
 	for a in fichero:
 		if tipo in a.get("type"):
 			lista.append(a.get("name").get("english"))
-	return lista			
+	return lista
+
+def AlmacenarEstadisticas(nombre,fichero):
+	lista=[]
+	try:
+		for a in fichero:
+			if a.get("name").get("english") == nombre:
+				hp = a.get("base").get("HP")
+				attack = a.get("base").get("Attack")
+				defense = a.get("base").get("Defense")
+				sp_attack = a.get("base").get("Sp. Attack")
+				sp_defense = a.get("base").get("Sp. Defense")
+				speed = a.get("base").get("Speed")
+		lista.extend([hp,attack,defense,sp_attack,sp_defense,speed])		
+		return lista
+	except:
+		print("Alguno de los pokemon no existen")
+		sys.exit(0)					

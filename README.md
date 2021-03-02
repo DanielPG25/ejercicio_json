@@ -13,6 +13,6 @@ por dicha cadena y la suma total de sus estadísticas base.
 
 5.Te pide dos pokemon por teclado y te indica cual de los dos es más fuerte
 (según la suma de sus estadísticas base). También indica cuales de las
-estadñisticas base del ganador son mejores que las del perdedor.
+estadisticas base del ganador son mejores que las del perdedor.
 
 
